@@ -124,6 +124,7 @@ hr {
   position: relative;
   animation: fadeIn 0.6s ease-in;
 }
+
 .chat-bubble:after {
   content: "";
   position: absolute;
