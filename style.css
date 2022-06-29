@@ -195,6 +195,11 @@ hr {
   background-color: #31ed31;
   border-radius: 100%;
 }
+
+#change-theme {
+  margin: 0;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
