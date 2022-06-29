@@ -12,6 +12,7 @@ img {
   background: #fff;
   padding: 0;
   border-radius: 7px;
+  transition: all 0.3s ease;
 }
 
 .profile-image {
@@ -196,8 +197,21 @@ hr {
   border-radius: 100%;
 }
 
+.container.dark {
+  background: #111;
+}
+
+.friend-drawer--onhover.dark {
+  color: #fff;
+  background: #111;
+}
+
 #change-theme {
   margin: 0;
+  transition: all 0.3s ease;
+}
+
+.message {
   transition: all 0.3s ease;
 }
 

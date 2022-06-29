@@ -8,14 +8,6 @@ const lastSeen = document.getElementById("last-seen");
 
 const chatBubbles = document.querySelectorAll(".chat-bubble");
 
-const themeBtn = document.getElementById("change-theme");
-const chatContainer = document.querySelector(".container");
-
-themeBtn.addEventListener("click", () => {
-  themeBtn.classList.toggle("bx-moon");
-  chatContainer.classList.toggle("dark-theme");
-});
-
 let people = [
   { name: "Robo Cop", info: `Last seen 2 hours ago` },
   { name: "Optimus", info: `Last seen recently` },
@@ -51,4 +43,18 @@ users.forEach((user, index) => {
   });
 });
 
+const changeTheme = () => {
+  const themeBtn = document.getElementById("change-theme");
 
+  const chatContainer = document.querySelector(".container");
+
+  themeBtn.onclick = () => {
+    themeBtn.classList.toggle("bx-sun");
+    chatContainer.classList.toggle("dark");
+    users.forEach(user => {
+      user.classList.toggle('dark')
+    })
+  };
+};
+
+changeTheme();
