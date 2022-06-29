@@ -122,7 +122,7 @@ hr {
   margin: 10px 30px;
   border-radius: 9px;
   position: relative;
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.6s ease-in;
 }
 .chat-bubble:after {
   content: "";
@@ -179,7 +179,7 @@ hr {
 }
 
 .chat-bubble.fade-in {
-  animation: fadeOnTransition 1s ease-in-out;
+  animation: fadeOnTransition 0.6s ease-in-out;
 }
 
 @keyframes fadeIn {
