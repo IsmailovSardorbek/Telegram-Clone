@@ -125,6 +125,10 @@ hr {
   animation: fadeIn 0.6s ease-in;
 }
 
+.profile-avatar {
+  border: 2px solid red;
+  position: relative;
+}
 .chat-bubble:after {
   content: "";
   position: absolute;
