@@ -126,7 +126,6 @@ hr {
 }
 
 .profile-avatar {
-  border: 2px solid red;
   position: relative;
 }
 .chat-bubble:after {
@@ -187,6 +186,15 @@ hr {
   animation: fadeOnTransition 0.6s ease-in-out;
 }
 
+.online {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  bottom: 0;
+  right: 0;
+  background-color: #31ed31;
+  border-radius: 100%;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
