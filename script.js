@@ -7,6 +7,7 @@ const profileAvatar = document.querySelector("#avatar");
 const lastSeen = document.getElementById("last-seen");
 
 const chatBubbles = document.querySelectorAll(".chat-bubble");
+
 let people = [
   { name: "Robo Cop", info: `Last seen 2 hours ago` },
   { name: "Optimus", info: `Last seen recently` },
