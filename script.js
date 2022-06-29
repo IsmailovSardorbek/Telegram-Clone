@@ -8,6 +8,12 @@ const lastSeen = document.getElementById("last-seen");
 
 const chatBubbles = document.querySelectorAll(".chat-bubble");
 
+const themeBtn = document.getElementById("change-theme");
+
+themeBtn.addEventListener("click", () => {
+  themeBtn.classList.toggle("bx-sun");
+});
+
 let people = [
   { name: "Robo Cop", info: `Last seen 2 hours ago` },
   { name: "Optimus", info: `Last seen recently` },
