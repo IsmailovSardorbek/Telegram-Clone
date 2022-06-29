@@ -48,12 +48,18 @@ const changeTheme = () => {
 
   const chatContainer = document.querySelector(".container");
 
+  const settingsTray = document.querySelectorAll(".settings-tray");
+
   themeBtn.onclick = () => {
     themeBtn.classList.toggle("bx-sun");
     chatContainer.classList.toggle("dark");
-    users.forEach(user => {
-      user.classList.toggle('dark')
-    })
+    users.forEach((user) => {
+      user.classList.toggle("dark");
+    });
+
+    settingsTray.forEach((tray) => {
+      tray.classList.toggle("dark");
+    });
   };
 };
 
