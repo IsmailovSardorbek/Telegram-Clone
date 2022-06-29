@@ -8,22 +8,19 @@ const lastSeen = document.getElementById("last-seen");
 
 const chatBubbles = document.querySelectorAll(".chat-bubble");
 
-function changeTheme() {
-  const themeBtn = document.getElementById("change-theme");
-  const chatContainer = document.querySelector(".container");
+const themeBtn = document.getElementById("change-theme");
+const chatContainer = document.querySelector(".container");
 
-  themeBtn.addEventListener("click", () => {
-    themeBtn.classList.toggle("bx-moon");
-    chatContainer.classList.toggle("dark-theme");
-  });
-}
+themeBtn.addEventListener("click", () => {
+  themeBtn.classList.toggle("bx-moon");
+  chatContainer.classList.toggle("dark-theme");
+});
 
-changeTheme();
 let people = [
   { name: "Robo Cop", info: `Last seen 2 hours ago` },
   { name: "Optimus", info: `Last seen recently` },
   { name: "Skynet", info: `Last seen just now` },
-  { name: "Termy", info: `Last seen 5 minut es ago` },
+  { name: "Termy", info: `Last seen 5 minutes ago` },
   { name: "Richard", info: `Last seen a long time ago` },
   { name: "XXXXX", info: `Last seen 1 hour ago` },
 ];
