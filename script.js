@@ -72,9 +72,5 @@ const searchInput = document.getElementById("text");
 const users = document.querySelectorAll(".user");
 console.log(users);
 searchInput.addEventListener("input", (e) => {
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].innerHTML.includes(e)) {
-      alert(1);
-    }
-  }
+  
 });
