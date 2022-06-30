@@ -76,9 +76,9 @@ const findOnSearch = () => {
         for (let i = 0; i < userTabs.length; i++) {
           let neededName = userTabs[i].querySelector(".user");
           if (neededName.innerHTML.includes(e.target.value)) {
-            userTabs[i].style.display = "block";
+            userTabs[i].style.visibility = "visible";
           } else {
-            userTabs[i].style.display = "none";
+            userTabs[i].style.visibility = "hidden";
           }
         }
       }
