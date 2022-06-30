@@ -42,11 +42,10 @@ userTabs.forEach((user, index) => {
     });
   });
 });
+const chatContainer = document.querySelector(".container");
 
 const changeTheme = () => {
   const themeBtn = document.getElementById("change-theme");
-
-  const chatContainer = document.querySelector(".container");
 
   const settingsTray = document.querySelectorAll(".settings-tray");
 
@@ -55,7 +54,7 @@ const changeTheme = () => {
 
     chatContainer.classList.toggle("dark");
 
-    users.forEach((user) => {
+    userTabs.forEach((user) => {
       user.classList.toggle("dark");
     });
 
@@ -67,10 +66,24 @@ const changeTheme = () => {
 
 changeTheme();
 
-const searchInput = document.getElementById("text");
+const findOnSearch = () => {
+  const users = document.querySelectorAll(".user");
+  const searchInput = document.getElementById("text");
 
-const users = document.querySelectorAll(".user");
-console.log(users);
-searchInput.addEventListener("input", (e) => {
-  
-});
+  searchInput.addEventListener("input", (e) => {
+    users.forEach((user) => {
+      if (user.textContent.includes(e.target.value)) {
+        for (let i = 0; i < userTabs.length; i++) {
+          let neededName = userTabs[i].querySelector(".user");
+          if (neededName.innerHTML.includes(e.target.value)) {
+            userTabs[i].style.display = "block";
+          } else {
+            userTabs[i].style.display = "none";
+          }
+        }
+      }
+    });
+  });
+};
+
+findOnSearch();
