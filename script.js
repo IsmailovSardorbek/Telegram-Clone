@@ -1,4 +1,4 @@
-const users = document.querySelectorAll(".friend-drawer--onhover");
+const userTabs = document.querySelectorAll(".friend-drawer--onhover");
 
 const personName = document.getElementById("person-name");
 
@@ -26,7 +26,7 @@ let images = [
   "https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg",
 ];
 
-users.forEach((user, index) => {
+userTabs.forEach((user, index) => {
   user.addEventListener("click", function () {
     let activeUser = document.querySelector(".active-user");
     activeUser.className = activeUser.className.replace(" active-user", "");
@@ -52,7 +52,9 @@ const changeTheme = () => {
 
   themeBtn.onclick = () => {
     themeBtn.classList.toggle("bx-sun");
+
     chatContainer.classList.toggle("dark");
+
     users.forEach((user) => {
       user.classList.toggle("dark");
     });
@@ -64,3 +66,15 @@ const changeTheme = () => {
 };
 
 changeTheme();
+
+const searchInput = document.getElementById("text");
+
+const users = document.querySelectorAll(".user");
+console.log(users);
+searchInput.addEventListener("input", (e) => {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].innerHTML.includes(e)) {
+      alert(1);
+    }
+  }
+});
