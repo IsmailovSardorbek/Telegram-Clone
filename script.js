@@ -75,10 +75,7 @@ const findOnSearch = () => {
       if (user.textContent.includes(e.target.value)) {
         for (let i = 0; i < userTabs.length; i++) {
           let neededName = userTabs[i].querySelector(".user");
-          if (
-            neededName.innerHTML.includes(e.target.value.toLowerCase()) ||
-            neededName.innerHTML.includes(e.target.value.toUpperCase())
-          ) {
+          if (neededName.innerHTML.includes(e.target.value)) {
             userTabs[i].style.opacity = "1";
           } else {
             userTabs[i].style.opacity = "0";
